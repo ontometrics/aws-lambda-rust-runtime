@@ -1,5 +1,11 @@
 # Rust Runtime for AWS Lambda
 
+## Build hello rust
+
+run the command `cargo build -p lambda --example hello --release --target x86_64-unknown-linux-musl`
+
+copy the build into a zip using `cp ./target/x86_64-unknown-linux-musl/release/examples/hello ./bootstrap && zip lambda.zip bootstrap && rm bootstrap` 
+
 [![Build Status](https://github.com/awslabs/aws-lambda-rust-runtime/workflows/Rust/badge.svg)](https://github.com/awslabs/aws-lambda-rust-runtime/actions)
 
 This package makes it easy to run AWS Lambda Functions written in Rust. This workspace includes multiple crates:
